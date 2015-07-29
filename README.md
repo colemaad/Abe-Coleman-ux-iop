@@ -3,8 +3,7 @@ This project connects to a local Server API, and displays a list of users. This 
 dynamic, meaning that users can be edited/deleted/added at any time.
 
 ##Dependencies
-1.Mongo
-2. Intern Onboarding Server
+Mongo, Intern Onboarding Server
 
 ##Install/Run:
 Download the server API.
