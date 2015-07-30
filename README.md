@@ -9,5 +9,5 @@ Download the server API.
 Under development.
 
 Dependencies
-1.[Mongo](https://www.mongodb.org/)
-2.[Intern Onboarding Server API](https://github.com/Banno/ux_onboarding)
+-[Mongo](https://www.mongodb.org/)
+-[Intern Onboarding Server API](https://github.com/Banno/ux_onboarding)
