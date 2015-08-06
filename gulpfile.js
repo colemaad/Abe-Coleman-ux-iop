@@ -1,5 +1,6 @@
- var gulp = require('gulp'),
-  connect = require('gulp-connect');
+var gulp = require('gulp-help')(require('gulp'));
+var sass = require('gulp-sass');
+var connect = require('gulp-connect');
 
 gulp.task('connect', function() {
   connect.server({
@@ -9,13 +10,21 @@ gulp.task('connect', function() {
   });
 });
 
-gulp.task('html', function () {
+gulp.task('reload', function () {
   gulp.src('src')
     .pipe(connect.reload());
 });
 
-gulp.task('watch', function () {
-  gulp.watch(['*.html'], ['html']);
+// Compile Our Sass
+gulp.task('sass', function() {
+    return gulp.src('src/*.scss', 'src/*.sass')
+        .pipe(sass())
+        .pipe(gulp.dest('src'));
 });
 
-gulp.task('default', ['connect', 'watch']);
+gulp.task('watch', function () {
+  gulp.watch('src/*.scss', ['sass']);
+  gulp.watch(['src/*.html', 'src/*.css', 'src/*.js'], ['reload']);
+});
+
+gulp.task('default', ['sass','connect', 'watch']);
