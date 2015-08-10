@@ -11,6 +11,6 @@ $( document ).ready(function() {
     $(".email").show();
     $(".phone").show();
     $(".first").show();
-    $(".second").hide();    
+    $(".second").hide();
   });
 });
