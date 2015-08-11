@@ -1,6 +1,7 @@
 var gulp = require('gulp-help')(require('gulp'));
 var sass = require('gulp-sass');
 var connect = require('gulp-connect');
+var jshint= require('gulp-jshint');
 
 gulp.task('connect', function() {
   connect.server({
